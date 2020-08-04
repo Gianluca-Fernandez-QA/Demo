@@ -29,5 +29,11 @@ public class test {
 	public void test() throws InterruptedException {
 		driver.manage().window();
 		driver.get("http://thedemosite.co.uk/ ");
+		
+	}
 	
-}}
+	public void fullscreen() {
+		driver.manage().window().fullscreen();
+	}
+
+}
