@@ -26,16 +26,31 @@ public class test {
 	}
 
 	@Test
-	public void UserLogin() throws InterruptedException {
+	public void UserCreation() throws InterruptedException {
 		driver.manage().window();
 		driver.get("http://thedemosite.co.uk/addauser.php");
 		fullscreen();
 		WebElement target = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[1]/td[2]/p/input"));
-		target.sendKeys("1");
+		target.sendKeys("0000");
 		WebElement target2 = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[2]/td[2]/p/input"));
-		target2.sendKeys("1");
+		target2.sendKeys("0000");
 		WebElement target3 = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[3]/td[2]/p/input"));
-		target.click();
+		target3.click();
+		fullscreen();
+	}
+	
+	@Test
+	public void UserLogin() throws InterruptedException {
+		driver.get("http://thedemosite.co.uk/login.php");
+		fullscreen();
+		WebElement target = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[1]/td[2]/p/input"));
+		target.sendKeys("0000");
+		WebElement target2 = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[2]/td[2]/p/input"));
+		target2.sendKeys("0000");
+		WebElement target3 = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[3]/td[2]/p/input"));
+		target3.click();
+		fullscreen();
+		
 	}
 	
 	public void fullscreen() {
