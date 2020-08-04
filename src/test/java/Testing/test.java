@@ -26,9 +26,14 @@ public class test {
 	}
 
 	@Test
-	public void test() throws InterruptedException {
+	public void UserLogin() throws InterruptedException {
 		driver.manage().window();
-		driver.get("http://thedemosite.co.uk/ ");
+		driver.get("http://thedemosite.co.uk/addauser.php");
+		fullscreen();
+		WebElement target = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[1]/td[2]/p/input"));
+		target.sendKeys("1");
+		WebElement target2 = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[2]/td[2]/p/input"));
+		
 		
 	}
 	
